@@ -1,11 +1,9 @@
 #container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 #container strong {
@@ -24,4 +22,15 @@
 
 #container a {
   text-decoration: none;
+}
+#weather-card{
+margin-left: auto;
+margin-right: auto;
+height: 200px;
+width: 200px;
+text-align: center;
+background-color: dodgerblue;
+}
+#weather-title{
+  color: white;
 }
