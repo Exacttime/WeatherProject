@@ -12,8 +12,18 @@
       <ion-title size="large">&e&WeatherSite</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div>
+    <ion-searchbar id="ion-searchbar" search-icon="search-circle" placeholder="Onde?">
+    </ion-searchbar>
+
+  </div>
   <div id="container">
-    <ion-card id="weather-card"> <ion-card-header id="weather-title">This WeatherCard</ion-card-header>
+    <ion-card id="weather-card">
+      <ion-card-header>
+        <ion-card-title>
+          {{this.name}}
+        </ion-card-title>
+      </ion-card-header>
     </ion-card>
   </div>
 </ion-content>
