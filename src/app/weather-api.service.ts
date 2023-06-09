@@ -16,7 +16,7 @@ export class WeatherApiService {
   url = "https://api.weatherapi.com/v1/current.json?key=";
   q: string | null | undefined;
   fullUrl = this.url + this.key ;
-  searchUrl = "http://api.weatherapi.com/v1/search.json?key=6d66af816f0d44d9942225012230806";
+  searchUrl = "https://api.weatherapi.com/v1/search.json?key=6d66af816f0d44d9942225012230806";
   constructor(private weatherApi: HttpClient) { }
   getWeather(){
   return this.weatherApi.get<any>(`${this.fullUrl}&q=${this.q}+&aqi=no`);
