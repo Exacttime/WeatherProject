@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
   this.searchTerm = this.searchBar.value;
   this.weather.q = this.searchTerm;
   if(this.searchTerm?.length! >= 3){
-    this.weather.autoComplete().subscribe(data => {this.name = data.name});
+    this.weather.autoComplete().subscribe(data => {this.name = data.name; console.log(data);});
   }
   }
 }
