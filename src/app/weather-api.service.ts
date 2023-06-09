@@ -13,7 +13,7 @@ export enum WeatherInfo{
 })
 export class WeatherApiService {
   key = "6d66af816f0d44d9942225012230806";
-  url = "http://api.weatherapi.com/v1/current.json?key=";
+  url = "https://api.weatherapi.com/v1/current.json?key=";
   q = "Rio de Janeiro";
   fullUrl = this.url + this.key ;
   constructor(private weatherApi: HttpClient) { }
