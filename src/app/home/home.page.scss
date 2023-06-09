@@ -30,7 +30,17 @@ height: 200px;
 width: 200px;
 text-align: center;
 background-color: dodgerblue;
+transition: transform 0.3s ease;
+}
+#weather-card:hover{
+transform: scale(1.2);
+cursor: grabbing;
 }
 #weather-title{
   color: white;
+
+}
+#ion-searchbar{
+  color: white;
+  background: white;
 }
