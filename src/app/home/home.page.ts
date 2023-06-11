@@ -14,6 +14,7 @@ export class HomePage implements OnInit {
   temperature!: number;
   name: string;
   searchTerm: string | null | undefined;
+  resultados: any[] = [];
   constructor(private weather: WeatherApiService) {this.searchTerm = '';this.name = '';}
   ngOnInit(){
     //this.weather.getWeather().subscribe(data => {
@@ -25,7 +26,7 @@ export class HomePage implements OnInit {
   this.searchTerm = this.searchBar.value;
   this.weather.q = this.searchTerm;
   if(this.searchTerm?.length! >= 3){
-    this.weather.autoComplete().subscribe(data => {this.name = data.name; console.log(data);});
+    this.weather.autoComplete().subscribe(data => {this.name = data.name; this.resultados = data; console.log(data);});
   }
   }
 }
