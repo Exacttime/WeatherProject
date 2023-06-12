@@ -13,11 +13,12 @@
     </ion-toolbar>
   </ion-header>
   <div>
-    <ion-searchbar id="search-city" (ionInput)="HandleInput()" #mySearchBar placeholder="Digite sua busca"></ion-searchbar>
+    <ion-searchbar id="search-city" (ionInput)="HandleInput()" #mySearchBar
+      placeholder="Digite sua busca"></ion-searchbar>
     <ion-list id="city-list">
       <ion-item *ngFor="let resultado of resultados">
         <ion-button target="_blank" (click)="PopulateCard(resultado.name)" class="search-item">
-         {{ resultado.name }} - {{resultado.region}}, {{resultado.country}}
+          {{ resultado.name }} - {{resultado.region}}, {{resultado.country}}
         </ion-button>
       </ion-item>
     </ion-list>
@@ -26,7 +27,7 @@
     <ion-card id="weather-card">
       <ion-card-header>
         <ion-card-title>
-          {{this.name}}
+          {{this.locationName}}
         </ion-card-title>
       </ion-card-header>
       {{this.temperature}}
