@@ -12,6 +12,7 @@ import { IonSearchbar } from '@ionic/angular';
 export class HomePage implements OnInit {
   @ViewChild('mySearchBar') searchBar!: IonSearchbar;
   temperature!: number;
+  temperatureText: string = '';
   locationName: string;
   searchTerm: string | null | undefined;
   resultados: any[] = [];
@@ -33,6 +34,7 @@ export class HomePage implements OnInit {
     resultadoCity = this.weather.q;
     this.weather.getWeather().subscribe(data => {
       this.temperature = data.current.temp_c;
+      this.temperatureText = this.temperature + "°C";
       this.locationName = data.location.name;
     })
   }

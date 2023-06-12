@@ -12,8 +12,8 @@
       <ion-title size="large">&e&WeatherSite</ion-title>
     </ion-toolbar>
   </ion-header>
-  <div>
-    <ion-searchbar id="search-city" (ionInput)="HandleInput()" #mySearchBar
+  <div class="search-div">
+    <ion-searchbar id="search-bar" (ionInput)="HandleInput()" #mySearchBar
       placeholder="Digite sua busca"></ion-searchbar>
     <ion-list id="city-list">
       <ion-item *ngFor="let resultado of resultados">
@@ -30,7 +30,7 @@
           {{this.locationName}}
         </ion-card-title>
       </ion-card-header>
-      {{this.temperature}}
+      {{this.temperatureText}}
     </ion-card>
   </div>
 </ion-content>
