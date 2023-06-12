@@ -31,6 +31,7 @@ width: 200px;
 text-align: center;
 background-color: dodgerblue;
 transition: transform 0.3s ease;
+color: white;
 }
 #weather-card:hover{
 transform: scale(1.2);
@@ -43,14 +44,34 @@ cursor: grabbing;
 #ion-searchbar{
   color: white;
   background: white;
+  background-color: white;
 }
-#search-city{
+#search-bar{
   width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
 #city-list{
+  background-color: var(--ion-background-color, #fff);
   margin-left: auto;
   margin-right: auto;
   width: 400px;
+}
+
+.sc-ion-searchbar-md-h
+{
+--color:white;
+--background: dodgerblue;
+transition: transform 0.3s ease-in;
+padding: 20px;
+}
+.sc-ion-searchbar-md-h:hover
+{
+  transform: scale(1.2);
+}
+.search-div
+{
+  width: 100%;
+  display: grid;
+  align-content: start;
 }
