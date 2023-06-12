@@ -13,8 +13,8 @@
     </ion-toolbar>
   </ion-header>
   <div>
-    <ion-searchbar (ionInput)="HandleInput()" #mySearchBar placeholder="Digite sua busca"></ion-searchbar>
-    <ion-list>
+    <ion-searchbar id="search-city" (ionInput)="HandleInput()" #mySearchBar placeholder="Digite sua busca"></ion-searchbar>
+    <ion-list id="city-list">
       <ion-item *ngFor="let resultado of resultados">
         <ion-button target="_blank" [href]="resultado.url" class="search-item">
           {{ resultado.name }} - {{resultado.region}}, {{resultado.country}}
