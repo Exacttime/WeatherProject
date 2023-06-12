@@ -32,4 +32,13 @@ export class HomePage implements OnInit {
     this.resultados = [];
   }
   }
+  PopulateCard(resultadoCity: string | null | undefined){ 
+  console.log(resultadoCity);
+  resultadoCity = this.weather.q;
+  this.weather.getWeather().subscribe(data => {
+    this.temperature = data.current.temp_c;
+    this.name= data.location.name;
+  })
+  }
 }
+
