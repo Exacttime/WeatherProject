@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
   HandleInput(){
   this.searchTerm = this.searchBar.value;
   this.weather.q = this.searchTerm;
-  if(this.searchTerm?.length! >= 3){
+  if(this.searchTerm?.length! >= 3 && this.searchTerm?.length! <= 15){
     this.weather.autoComplete().subscribe(data => {this.name = data.name; this.resultados = data; console.log(data);});
   }
   else {
