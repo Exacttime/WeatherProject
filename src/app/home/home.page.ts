@@ -28,5 +28,8 @@ export class HomePage implements OnInit {
   if(this.searchTerm?.length! >= 3){
     this.weather.autoComplete().subscribe(data => {this.name = data.name; this.resultados = data; console.log(data);});
   }
+  else {
+    this.resultados = [];
+  }
   }
 }
