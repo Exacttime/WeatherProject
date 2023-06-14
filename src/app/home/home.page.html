@@ -31,6 +31,12 @@
         </ion-card-title>
       </ion-card-header>
       {{this.temperatureText}}
+      <div *ngIf="temperature <=25">
+        <ion-img src="../../assets/icon/Cold Emoji.png" alt="" ></ion-img>
+      </div>
+      <div *ngIf="temperature >25">
+        <ion-img src="../../assets/icon/Hot Emoji.png" alt="" ></ion-img>
+      </div>
     </ion-card>
   </div>
 </ion-content>
