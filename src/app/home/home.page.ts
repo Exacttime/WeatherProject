@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { WeatherApiService } from '../weather-api.service';
 import { IonSearchbar } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
